@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Searrch Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<header>
+    <img src="/static/css/images/logo.png" alt="Flipkart Logo" class="logo">
+    <h1 class="title">Flipkart Review Scraper</h1>
+</header>
+<div class="container">
+    <div class="form">
+        <form action="/review" method="POST">
+            <div class="search-box">
+            <input type="text" name="content" id="content" placeholder="Search for product reviews"><br><br>
+            <button value="Search" class="search-btn"><i class="fas fa-search search-icon"></i>Find Reviews</button>
+            </div>
+        </form>
+        <p class="description">Make informed decisions by exploring product reviews on Flipkart.</p>
+    </div>
+</div>
+{% endblock %}
